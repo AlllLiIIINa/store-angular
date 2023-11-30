@@ -3,8 +3,12 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'store-app';
+  selectedProduct: any;
+  products: any[] = [];
+
+  onProductAdded(product: any) {
+    this.products.push(product);
+  }
 }
